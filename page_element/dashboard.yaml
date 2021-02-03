@@ -1,0 +1,26 @@
+# 累计数据汇总
+网站浏览量: "xpath==.//div[text()='网站浏览量']/../..//div[@class='item-data']/text()"
+网站用户总数: "xpath==.//div[text()='网站用户数']/../..//div[@class='item-data']/text()"
+表单询盘总数: "xpath==.//div[text()='表单询盘数']/../..//div[@class='item-data']/text()"
+邮件询盘总数: "xpath==.//div[text()='邮件询盘数']/../..//div[@class='item-data']/text()"
+社媒线索总数: "xpath==.//div[text()='社媒线索数']/../..//div[@class='item-data']/text()"
+Facebook询盘总数: "xpath==.//div[text()='Facebook询盘数']/../..//div[@class='item-data']/text()"
+
+# 未读询盘
+未读表单询盘数: "xpath==.//div[text()='未读询盘']/../../..//div[contains(text(), '表单询盘')]/..//div[@class='item-data']/text()"
+未读邮件询盘数: "xpath==.//div[text()='未读询盘']/../../..//div[contains(text(), '邮件询盘')]/..//div[@class='item-data']/text()"
+未读Messenger询盘数: "xpath==.//div[text()='未读询盘']/../../..//div[contains(text(), 'Messenger询盘')]/..//div[@class='item-data']/text()"
+未读询盘查看详情: "xpath==.//div[text()='未读询盘']/../../..//div[contains(text(), '查看详情')]/..//div[@class='item-data']/text()"
+
+# 最近表单询盘
+最近表单查看详情: "xpath==.//div[text()='最近表单询盘']/../../..//div[contains(text(),'查看详情')]/text()"
+最近邮件查看详情: "xpath==.//div[text()='最近表单询盘']/../../..//div[contains(text(),'查看详情')]/text()"
+最近messenger查看详情: "xpath==.//div[text()='最近表单询盘']/../../..//div[contains(text(),'查看详情')]/text()"
+
+# 线索统计
+总线索数: "xpath==.//div[text()='总线索数']/..//div[@class='num']/text()"
+表单询盘统计数: "xpath==.//div[text()='表单询盘']/..//div[@class='num']/text()"
+邮件询盘统计数: "xpath==.//div[text()='邮件询盘']/..//div[@class='num']/text()"
+社媒线索统计数: "xpath==.//div[text()='社媒线索索数']/..//div[@class='num']/text()"
+Messenger询盘统计数: "xpath==.//div[text()='Messenger询盘']/..//div[@class='num']/text()"
+Facebook表单询盘统计数: "xpath==.//div[text()='Facebook表单']/..//div[@class='num']/text()"
