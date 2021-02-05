@@ -14,8 +14,7 @@ ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
 # 日志目录
 LOG_PATH = os.path.join(BASE_DIR, 'logs')
 
-# 报告目录
-REPORT_PATH = os.path.join(BASE_DIR, 'report', 'report.html')
+
 
 # 截图目录
 SCREENSHOT_DIR = os.path.join(BASE_DIR, 'screen_capture')

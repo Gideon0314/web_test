@@ -1,3 +1,2 @@
-pytest --reruns 2 --alluredir report\allure-results --clean-alluredir
-
-allure generate report\allure-results -c -o report\allure-report
+pytest --reruns 2 --alluredir reports\allure-results --clean-alluredir
+allure generate report\allure-results -c -o reports\allure-report

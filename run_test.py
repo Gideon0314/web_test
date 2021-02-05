@@ -1,44 +1,35 @@
 # -*- coding: UTF-8 -*-
 import os
 import subprocess
+from datetime import datetime
+from time import sleep
 
-# def api_docs_path():
-#     curpath = os.path.dirname(os.path.realpath(__file__))
-#     api_docs_path = os.path.join(curpath, 'api_docs')
-#     if not os.path.exists(api_docs_path):
-#         os.mkdir(api_docs_path)
-#     return api_docs_path
-
-
-curpath = os.path.dirname(os.path.realpath(__file__))
-report_path = os.path.join(curpath, 'report')
-
-# file_name = 'cut_info.har'
-#
-# if file_name in os.listdir(filePath):
-#     real_name = file_name
-#     print(real_name)
-#
-#     dir = r"C:\ApiDocsToJson\HttpRunner"
-#     cmdline = f"har2case -2j {real_name}"
-
-
-cmdline_list = [
-    r'pytest --reruns 2 --alluredir report\allure-results --clean-alluredir',
-    r'allure generate report/allure-results -c -o report/allure-report',
-    # r'allure open allure-report'
-]
+from tools.zip_file import zip_compress
 
 
 def rc():
+
+    curpath = os.path.dirname(os.path.realpath(__file__))
+
+    now = datetime.now().strftime('%Y%m%d%H%M%S')
+    allure_result, allure_report = f"result_{now}", f"report_{now}"
+
+    cmdline_list = [
+        f'pytest --reruns 2 --alluredir reports\\{allure_result} --clean-alluredir',
+        f'allure generate report\\{allure_result} -c -o reports\\{allure_report}',
+        # r'allure open allure-report'
+    ]
     for cmdline in cmdline_list:
-        # run `cmdline` in `dir`
-        subprocess.run(cmdline, cwd=curpath, shell=True)
-        # subprocess.Popen
-        # rc = call(cmdline, cwd=curpath, shell=True)
-        # print(rc)
+
+        ret = subprocess.run(cmdline, cwd=curpath, shell=True)
+        if ret.returncode == 0:
+            print("success:", ret)
+            pass
+        else:
+            return ret.returncode
+    sleep(5)
+    zip_compress(f'reports\\{allure_report}',f'reports\\{allure_report}.zip')
 
 
 if __name__ == '__main__':
     rc()
-    # print(report_path)
