@@ -16,7 +16,7 @@ def rc():
 
     cmdline_list = [
         f'pytest --reruns 2 --alluredir reports\\{allure_result} --clean-alluredir',
-        f'allure generate report\\{allure_result} -c -o reports\\{allure_report}',
+        f'allure generate reports\\{allure_result} -c -o reports\\{allure_report}',
         # r'allure open allure-report'
     ]
     for cmdline in cmdline_list:
@@ -33,3 +33,4 @@ def rc():
 
 if __name__ == '__main__':
     rc()
+

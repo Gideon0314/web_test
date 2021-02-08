@@ -7,6 +7,7 @@ from page_action.search_page import SearchPage
 
 
 class TestSearch:
+    """test"""
     @pytest.fixture(scope='function', autouse=True)
     def open_baidu(self, drivers):
         """打开百度"""
@@ -14,7 +15,7 @@ class TestSearch:
         search.get_url(ini.url)
 
     def test_001(self, drivers):
-        """搜索"""
+        """test"""
         search = SearchPage(drivers)
         search.input_search("selenium")
         search.click_search()
@@ -23,7 +24,7 @@ class TestSearch:
         assert result
 
     def test_002(self, drivers):
-        """测试搜索候选"""
+        """test2"""
         search = SearchPage(drivers)
         search.input_search("selenium")
         log.info(list(search.imagine))

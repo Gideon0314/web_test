@@ -11,7 +11,7 @@ def send_email(recipient, headline, contents):
     return yag.send(recipient, headline, contents)
 
 
-def send_report(report):
+def send_report(report=None):
     # 报告目录
     """发送报告"""
     # with open(REPORT_PATH, encoding='UTF-8') as f:
