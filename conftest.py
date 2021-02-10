@@ -5,23 +5,23 @@ import pytest
 import allure
 from py._xmlgen import html
 from selenium import webdriver
-
 from common.read_config import ini
 from config.config import SCREENSHOT_DIR
 from tools.send_email import send_report
 from tools.times import datetime_strftime, timestamp
 from common.inspect import inspect_element
 
+
 driver = None
 curpath = os.path.dirname(os.path.realpath(__file__))
-drivers_path = os.path.join(curpath, 'drivers')
+# drivers_path = os.path.join(curpath, 'drivers')
 
 
 @pytest.fixture(scope='session', autouse=True)
 def drivers(request):
     global driver
     if driver is None:
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome("drivers\chromedriver.exe")
         driver.maximize_window()
 
     def fn():
