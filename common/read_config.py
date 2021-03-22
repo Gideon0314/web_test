@@ -15,11 +15,11 @@ class ReadConfig:
         self.config = configparser.RawConfigParser()  # 当有%的符号时请使用Raw读取
         self.config.read(INI_PATH, encoding='utf-8')
 
-    def _get(self, section, option):
+    def __get(self, section, option):
         """获取"""
         return self.config.get(section, option)
 
-    def _set(self, section, option, value):
+    def __set(self, section, option, value):
         """更新"""
         self.config.set(section, option, value)
         with open(INI_PATH, 'w') as f:
@@ -27,7 +27,7 @@ class ReadConfig:
 
     @property
     def url(self):
-        return self._get(HOST, HOST)
+        return self.__get(HOST, HOST)
 
 
 ini = ReadConfig()

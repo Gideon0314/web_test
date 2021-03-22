@@ -3,7 +3,6 @@ import os
 import subprocess
 from datetime import datetime
 from time import sleep
-
 from tools.zip_file import zip_compress
 
 
@@ -33,4 +32,3 @@ def rc():
 
 if __name__ == '__main__':
     rc()
-

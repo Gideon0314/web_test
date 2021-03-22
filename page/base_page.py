@@ -5,7 +5,6 @@ from selenium.common.exceptions import TimeoutException
 from config.config import LOCATE_MODE
 from tools.times import sleep
 from tools.logger import log
-from selenium import webdriver
 
 
 class BasePage(object):
@@ -79,7 +78,3 @@ class BasePage(object):
         """刷新页面F5"""
         self.driver.refresh()
         self.driver.implicitly_wait(30)
-
-
-if __name__ == "__main__":
-    pass

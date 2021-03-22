@@ -39,6 +39,7 @@ EMAIL_INFO = {
 # 收件人
 ADDRESSEE = [
     'tjd0314@126.com',
+    'gideon_tao@skytech.cn',
 ]
 
 if __name__ == '__main__':

@@ -9,9 +9,9 @@ def inspect_element():
     """审查所有的元素是否正确"""
     start_time = timestamp()
     for i in os.listdir(ELEMENT_PATH):
-        _path = os.path.join(ELEMENT_PATH, i)
-        if os.path.isfile(_path):
-            with open(_path, encoding='utf-8') as f:
+        __path = os.path.join(ELEMENT_PATH, i)
+        if os.path.isfile(__path):
+            with open(__path, encoding='utf-8') as f:
                 data = yaml.safe_load(f)
                 for k in data.values():
                     pattern, value = k.split('==')
