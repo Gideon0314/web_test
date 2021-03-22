@@ -32,7 +32,7 @@ LOCATE_MODE = {
 EMAIL_INFO = {
     # 切换成你自己的地址
     'user': 'tjd0314@126.com',
-    'password': 'SQDXTUHPZZORDIXL',
+    'password': '',
     'host': 'smtp.126.com',
 }
 
