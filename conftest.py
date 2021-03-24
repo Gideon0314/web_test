@@ -14,14 +14,14 @@ from common.inspect import inspect_element
 
 driver = None
 curpath = os.path.dirname(os.path.realpath(__file__))
-# drivers_path = os.path.join(curpath, 'drivers')
+drivers_path = os.path.join(curpath, 'drivers\chromedriver.exe')
 
 
 @pytest.fixture(scope='session', autouse=True)
 def drivers(request):
     global driver
     if driver is None:
-        driver = webdriver.Chrome("drivers\chromedriver.exe")
+        driver = webdriver.Chrome(drivers_path)
         driver.maximize_window()
 
     def fn():

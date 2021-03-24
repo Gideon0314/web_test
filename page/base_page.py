@@ -7,7 +7,7 @@ from tools.times import sleep
 from tools.logger import log
 
 
-class BasePage(object):
+class BasePage():
     """selenium基类"""
 
     def __init__(self, driver):

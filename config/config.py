@@ -15,7 +15,6 @@ ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
 LOG_PATH = os.path.join(BASE_DIR, 'logs')
 
 
-
 # 截图目录
 SCREENSHOT_DIR = os.path.join(BASE_DIR, 'screen_capture')
 
@@ -33,14 +32,22 @@ EMAIL_INFO = {
     # 切换成你自己的地址
     'user': 'tjd0314@126.com',
     'password': '',
-    'host': 'smtp.126.com',
+    'host': 'smtp.126.com'
 }
 
 # 收件人
 ADDRESSEE = [
     'tjd0314@126.com',
-    'gideon_tao@skytech.cn',
+    'gideon_tao@skytech.cn'
 ]
+
+
+REDIS_INFO = {
+    'host': '',
+    'port': '',
+    'password': '',
+    'db': ''
+}
 
 if __name__ == '__main__':
     print(BASE_DIR)
