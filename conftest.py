@@ -5,7 +5,8 @@ import pytest
 import allure
 from py._xmlgen import html
 from selenium import webdriver
-from common.read_config import ini
+
+from common.read_config import cfg
 from config.config import SCREENSHOT_DIR
 from tools.send_email import send_report
 from tools.times import datetime_strftime, timestamp
@@ -79,7 +80,7 @@ def pytest_html_report_title(report):
 def pytest_configure(config):
     config._metadata.clear()
     config._metadata['测试项目'] = "测试项目"
-    config._metadata['测试地址'] = ini.url
+    config._metadata['测试地址'] = cfg['HOST']
 
 
 def pytest_html_results_summary(prefix, summary, postfix):

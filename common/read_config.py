@@ -1,36 +1,26 @@
 # -*- coding: UTF-8 -*-
 import os
-import configparser
-from config.config import INI_PATH
-
-HOST = 'HOST'
+from config.config import YML_PATH
+import yaml
 
 
 class ReadConfig:
     """配置文件"""
 
     def __init__(self):
-        if not os.path.exists(INI_PATH):
-            raise FileNotFoundError("配置文件%s不存在！" % INI_PATH)
-        self.config = configparser.RawConfigParser()  # 当有%的符号时请使用Raw读取
-        self.config.read(INI_PATH, encoding='utf-8')
-
-    def __get(self, section, option):
-        """获取"""
-        return self.config.get(section, option)
-
-    def __set(self, section, option, value):
-        """更新"""
-        self.config.set(section, option, value)
-        with open(INI_PATH, 'w') as f:
-            self.config.write(f)
+        if not os.path.exists(YML_PATH):
+            raise FileNotFoundError("配置文件%s不存在！" % 'C:\Test_Helper\web_test\config\config.yml')
+        with open(YML_PATH, 'r') as ymlfile:
+            self.cfg = yaml.safe_load(ymlfile)
 
     @property
-    def url(self):
-        return self.__get(HOST, HOST)
+    def get_cfg(self):
+        """获取"""
+        return self.cfg
 
 
-ini = ReadConfig()
+cfg = ReadConfig().get_cfg
+
 
 if __name__ == '__main__':
-    print(ini.url)
+    pass

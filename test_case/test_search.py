@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 import re
 import pytest
+from common.read_config import cfg
 from tools.logger import log
-from common.read_config import ini
 from page_action.search_page import SearchPage
 
 
@@ -12,7 +12,7 @@ class TestSearch:
     def open_baidu(self, drivers):
         """打开百度"""
         search = SearchPage(drivers)
-        search.get_url(ini.url)
+        search.get_url(cfg['HOST'])
 
     def test_001(self, drivers):
         """test"""

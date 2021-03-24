@@ -1,12 +1,13 @@
 # -*- coding: UTF-8 -*-
+import json
 import os
 import smtplib
 import yagmail
-from config.config import EMAIL_INFO, ADDRESSEE
+from common.read_config import cfg
 
 
 def send_email(recipient, headline, contents):
-    yag = yagmail.SMTP(**EMAIL_INFO)
+    yag = yagmail.SMTP(**cfg['EMAIL_INFO'])
     # 发送邮件
     return yag.send(recipient, headline, contents)
 
@@ -16,7 +17,7 @@ def send_report(report=None):
     """发送报告"""
     # with open(REPORT_PATH, encoding='UTF-8') as f:
     #     html = f.read()
-    recipient = ADDRESSEE
+    recipient = cfg['ADDRESSEE']
     headline = '测试报告'
     contents = [
         '附件为本次测试结果',
@@ -32,5 +33,5 @@ def send_report(report=None):
 
 if __name__ == "__main__":
     '''请先在config/config.py文件设置邮箱的账号和密码'''
-    pass
-    # send_report()
+    # pass
+    send_report()
