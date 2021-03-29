@@ -79,8 +79,3 @@ class BasePage():
         """刷新页面F5"""
         self.driver.refresh()
         self.driver.implicitly_wait(30)
-
-    def mouse_acitons(self):
-        ActionChains(self.driver).click()
-        ActionChains(self.driver).double_click()
-        ActionChains(self.driver).double_click()
