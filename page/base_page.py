@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
@@ -78,3 +79,8 @@ class BasePage():
         """刷新页面F5"""
         self.driver.refresh()
         self.driver.implicitly_wait(30)
+
+    def mouse_acitons(self):
+        ActionChains(self.driver).click()
+        ActionChains(self.driver).double_click()
+        ActionChains(self.driver).double_click()
