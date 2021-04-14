@@ -47,4 +47,4 @@ def zip_compress(to_zip,save_zip_name):
 
 
 if __name__ == '__main__':
-    zip_compress(r"C:\Test_Helper\web_test\report\allure-report", r'C:\Test_Helper\web_test\report\123.zip')
+    zip_compress("", "")
