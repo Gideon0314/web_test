@@ -17,6 +17,8 @@ LOG_PATH = os.path.join(BASE_DIR, 'logs')
 # 截图目录
 SCREENSHOT_DIR = os.path.join(BASE_DIR, 'screen_capture')
 
+REDIS_INFO = ''
+
 # 元素定位的类型
 LOCATE_MODE = {
     'css': By.CSS_SELECTOR,
