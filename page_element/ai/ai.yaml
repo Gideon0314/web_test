@@ -1,0 +1,26 @@
+# 智能营销左侧菜单
+数据看板: "xpath==.//li[@role='menuitem']/span[contains(text(),'数据看板')]"
+天擎天拓服务: "xpath==.//li[@role='menuitem']/span[contains(text(),'天擎天拓服务')]"
+网站访客识别: "xpath==.//li[@role='menuitem']/span[contains(text(),'网站访客识别')]"
+网站访客自动营销: "xpath==.//li[@role='menuitem']/span[contains(text(),'网站访客自动营销')]"
+发件箱: "xpath==.//li[@role='menuitem']/span[contains(text(),'发件箱')]"
+草稿箱: "xpath==.//li[@role='menuitem']/span[contains(text(),'草稿箱')]"
+角色权限: "xpath==.//li[@role='menuitem']/span[contains(text(),'角色权限')]"
+子账户管理: "xpath==.//li[@role='menuitem']/span[contains(text(),'子账户管理')]"
+客户设置: "xpath==.//li[@role='menuitem']/span[contains(text(),'客户设置')]"
+系统设置: "xpath==.//li[@role='menuitem']/span[contains(text(),'系统设置')]"
+营销设置: "xpath==.//li[@role='menuitem']/span[contains(text(),'营销设置')]"
+
+# 数据看板
+最近网站访问-查看详情: "xpath==.//div[contains(text(),'最近网站访问')]/../..//div[@class='view-details']"
+广告恶意点击防御-查看详情: "xpath==.//div[contains(text(),'广告恶意点击防御')]/../..//div[@class='view-details']"
+最近表单询盘-查看详情: "xpath==.//span[contains(text(),'最近表单询盘')]/../..//div[@class='top-detail']"
+最近邮件询盘-查看详情: "xpath==.//span[contains(text(),'最近邮件询盘')]/../..//div[@class='top-detail']"
+最近messenger询盘-查看详情: "xpath==.//span[contains(text(),'最近messenger询盘')]/../..//div[@class='top-detail']"
+线索看板-查看详情: "xpath==.//span[contains(text(),'线索看板')]/../..//div[@class='top-detail']"
+Google Ads广告报告-查看详情: "xpath==.//span[contains(text(),'Google Ads广告报告')]/../..//div[@class='top-detail']"
+Facebook Ads广告报告-查看详情: "xpath==.//span[contains(text(),'Facebook Ads广告报告')]/../..//div[@class='top-detail']"
+
+# 天擎天拓服务
+天擎天拓服务悬浮框: "xpath==.//i[@class='iconfont icon-kehu']"
+天擎天拓服务悬浮-服务详情: "xpath==.//span[contains(text(),'服务详情')]"

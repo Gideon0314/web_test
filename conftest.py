@@ -5,29 +5,35 @@ import pytest
 import allure
 from py._xmlgen import html
 from selenium import webdriver
-
 from common.read_config import cfg
 from config.config import SCREENSHOT_DIR
 from tools.send_email import send_report
 from tools.times import datetime_strftime, timestamp
 from common.inspect import inspect_element
-
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 driver = None
 curpath = os.path.dirname(os.path.realpath(__file__))
-drivers_path = os.path.join(curpath, 'drivers\chromedriver.exe')
+chrome = os.path.join(curpath, 'drivers/chromedriver.exe')
+data = r'C:\Users\Gideon\AppData\Local\Google\Chrome\User Data\Default'
 
 
 @pytest.fixture(scope='session', autouse=True)
 def drivers(request):
     global driver
     if driver is None:
-        driver = webdriver.Chrome(drivers_path)
+        chrome_options = Options()
+        chrome_options.add_argument(f'--user-data-dir={data}')
+        # chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('disable-gpu')
+        # chrome_options.add_argument('blink-settings=imagesEnabled=false')
+        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        driver = webdriver.Chrome(service=Service(chrome), options=chrome_options)
         driver.maximize_window()
-
     def fn():
         driver.quit()
-
     request.addfinalizer(fn)
     return driver
 

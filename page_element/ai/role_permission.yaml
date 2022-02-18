@@ -1,0 +1,4 @@
+新增角色: "xpath==.//button/span[contains(text(),'新增角色')]"
+请输入角色名称: "xpath==.//input[@placeholder='请输入角色名称']"
+请输入角色描述: "xpath==.//input[@placeholder='请输入角色描述']"
+权限选择-全选: "xpath==.//div[@class='promission-all']//span[@class='el-checkbox__input']"

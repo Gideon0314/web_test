@@ -1,0 +1,9 @@
+# 询盘列表
+列表表单询盘数量统计: "xpath==.//div[@class='data-list']//span[contains(text(),'表单询盘')]"
+
+
+# 搜索栏
+名称或邮箱地址: "xpath==.//input[@prop='nameOrEmail']"
+线索来源: "xpath==.//div[@prop='customerSourceId']//input"
+跟进人: "xpath==.//div[@prop='followupPersonId']//input"
+跟进状态: "xpath==.//div[@prop='followupStatus']//input"

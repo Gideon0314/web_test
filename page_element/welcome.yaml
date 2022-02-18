@@ -1,0 +1,4 @@
+
+新功能弹窗关闭: "xpath==.//i[@class='el-dialog__close el-icon el-icon-close']"
+
+AI大数据: "xpath==.//div[@class='text1' and contains(text(),'AI')]"

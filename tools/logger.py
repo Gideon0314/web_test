@@ -6,6 +6,7 @@ from tools.times import datetime_strftime
 
 
 class Log:
+
     def __init__(self):
         self.logger = logging.getLogger()
         if not self.logger.handlers:
@@ -40,6 +41,7 @@ class Log:
 
 
 log = Log().logger
+
 
 if __name__ == '__main__':
     log.info('')

@@ -1,0 +1,6 @@
+切换验证码登录: "xpath==.//div[@class='qyCode']/i"
+手机号: "xpath==.//input[@placeholder='手机号码']"
+验证码: "xpath==.//input[@placeholder='请输入验证码']"
+登录: "xpath==.//span[text()='登 录']"
+请输入手机号码: "xpath==.//input[@placeholder='手机号码']/../..//div[@class='el-form-item__error']"
+请输入验证码: "xpath==.//input[@placeholder='请输入验证码']/../..//div[@class='el-form-item__error']"

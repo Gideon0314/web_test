@@ -1,0 +1,24 @@
+# 通知
+通知: "xpath==.//h2[@class='el-notification__title']"
+
+# 顶栏
+网站: "xpath==.//div[@class='websiteLangth']"
+跳转网站图标: "xpath==.//div[@class='website-icon']/i"
+登录用户名称: "xpath==.//div[@class='nameMain']"
+用户角色: "xpath==.//p[@class='user-role']"
+客户名称: "xpath==.//div[@class='customer-name']"
+套餐: "xpath==.//div[@class='taocan']/span"
+
+# 切换系统
+切换系统: "xpath==.//span[@class='all-system-change']"
+智能营销: "xpath==.//p[@class='popover-title' and contains(text(),'智能营销')]"
+CRM客户管理系统: "xpath==.//p[@class='popover-title' and contains(text(),'CRM客户管理系统')]"
+外贸智能云建站: "xpath==.//p[@class='popover-title' and contains(text(),'外贸智能云建站')]"
+SNS跨平台云社交系统: "xpath==.//p[@class='popover-title' and contains(text(),'SNS跨平台云社交系统')]"
+Google广告管理系统: "xpath==.//p[@class='popover-title' and contains(text(),'Google广告管理系统')]"
+Facebook广告管理系统: "xpath==.//p[@class='popover-title' and contains(text(),'Facebook广告管理系统')]"
+邮箱系统: "xpath==.//div[@class='popover-goBack email_logo_body']"
+回到欢迎页: "xpath==.//div[@class='popover-goBack']"
+
+# 导航面包削
+网站统计报告: "xpath==.//div[@aria-label='Breadcrumb']//span[contains(text(),'网站访问轨迹')]"

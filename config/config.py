@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 配置文件
-YML_PATH = os.path.join(BASE_DIR, 'config', 'config.yml')
+YAML_PATH = os.path.join(BASE_DIR, 'config', 'config.yaml')
 
 # 页面元素目录
 ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
