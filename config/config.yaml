@@ -3,7 +3,7 @@ HOST:
 #  https://i.iglobalwin.com/
 EMAIL_INFO:
   user: tjd0314@126.com
-  password: VDOMGMTVNZEVGWHJ
+  password: 
   host: smtp.126.com
 ADDRESSEE:
   - tjd0314@126.com
