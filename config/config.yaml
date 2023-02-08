@@ -1,22 +1,22 @@
 HOST:
-  https://test.i.iglobalwin.com/
-#  https://i.iglobalwin.com/
+  https://test.com/
+
 EMAIL_INFO:
-  user: tjd0314@126.com
+  user: 
   password: 
   host: smtp.126.com
 ADDRESSEE:
-  - tjd0314@126.com
-  - gideon0314@88.com
+  - 126@126.com
+  - 
 REDIS_INFO:
   port:
   password:
   host:
   db:
 TEST_USER:
-  moblie: 16602140314
+  moblie: 
   pw: 123
 PRE_USER:
-  moblie: 16602140314
+  moblie: 
   pw: 123
 
